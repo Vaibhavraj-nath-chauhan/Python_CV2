@@ -8,7 +8,7 @@ class fd:
     def face(self):
         try:
             import cv2
-            classifier = cv2.CascadeClassifier("D:\\Learning\\ML & DL\\harrCascade File\\haarcascade_frontalface_default.xml")
+            classifier = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
             cam  = cv2.VideoCapture(0)
             while True:
                 temp , img = cam.read()
