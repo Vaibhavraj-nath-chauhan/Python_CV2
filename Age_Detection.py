@@ -9,18 +9,18 @@ class ad:
         try:
             import cv2
             cam = cv2.VideoCapture(0)
-            classifier = cv2.CascadeClassifier("D:\\Learning\\ML & DL\\harrCascade File\\haarcascade_frontalface_default.xml")
+            classifier = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
             MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
 
             ######   AGE
-            deploy_age = "D:\\Learning\\ML & DL\\Age Detection\\deploy_age.prototxt"
-            age_net = "D:\\Learning\\ML & DL\\Age Detection\\age_net.caffemodel"
+            deploy_age = "deploy_age.prototxt"
+            age_net = "age_net.caffemodel"
             age_detection = cv2.dnn.readNetFromCaffe(deploy_age,age_net)
             age_list = ['(0)','(0, 2)', '(4, 6)', '(8, 12)', '(15, 20)', '(25, 32)', '(38, 43)', '(48, 53)', '(60, 100)']
 
             ######   Gender
-            deploy_gender = "D:\\Learning\\ML & DL\\Age Detection\\deploy_gender.prototxt"
-            gender_net = "D:\\Learning\\ML & DL\\Age Detection\\gender_net.caffemodel"
+            deploy_gender = "deploy_gender.prototxt"
+            gender_net = "gender_net.caffemodel"
             gender_detection = cv2.dnn.readNetFromCaffe(deploy_gender,gender_net)
             gender_list = ['Male', 'Female']
 
@@ -57,22 +57,3 @@ class ad:
             return True
         except:
             False
-
-
-# In[2]:
-
-
-k =ad()
-
-
-# In[3]:
-
-
-k.age_det()
-
-
-# In[ ]:
-
-
-
-
