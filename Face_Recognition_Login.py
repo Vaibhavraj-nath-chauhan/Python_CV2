@@ -7,7 +7,7 @@
 class registration:
     def register_function(self):
         import cv2
-        cassifier = cv2.CascadeClassifier("D:\\Learning\\ML & DL\\harrCascade File\\haarcascade_frontalface_default.xml")
+        cassifier = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
         cam = cv2.VideoCapture(0)
         count =0
         while True:
@@ -43,7 +43,7 @@ class registration:
                         train.append(img)
             face_model = cv2.face_LBPHFaceRecognizer.create()
             face_model.train(train,labels)
-            cassifier = cv2.CascadeClassifier("D:\\Learning\\ML & DL\\harrCascade File\\haarcascade_frontalface_default.xml")
+            cassifier = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
             cam = cv2.VideoCapture(0)
             pred_lis = []
             count=0
