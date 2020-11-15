@@ -12,8 +12,8 @@ class md:
         from tensorflow.keras.models import load_model
         from tensorflow.keras.applications.imagenet_utils import preprocess_input
         try:
-            model = load_model("C:\\Users\\Vaibhavraj\\MLOPss Traning\\projects\\Mask_Detection.h5")
-            classifier = cv2.CascadeClassifier("D:\\Learning\\ML & DL\\harrCascade File\\haarcascade_frontalface_default.xml")
+            model = load_model("Mask_Detection.h5")
+            classifier = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
             cam = cv2.VideoCapture(0)
             while True:
                 temp,img = cam.read()
